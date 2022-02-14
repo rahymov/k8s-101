@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: minikube-react-app
-        image: rahymov/react-k8s-example
+        image: rahymov/react-k8s-example  
         imagePullPolicy: Always
         ports:
         - containerPort: 80
@@ -25,18 +25,4 @@ spec:
           limits:
             memory: "200Mi"
             cpu: "600m"
-      restartPolicy: Always
----
-kind: Service
-apiVersion: v1
-metadata:
-  name: minikube-react-app
-spec:
-  type: NodePort
-  ports:
-    - port: 80
-      targetPort: 80
-      protocol: TCP
-      nodePort: 31000
-  selector:
-    app: minikube-react-app    
+      restartPolicy: Always    

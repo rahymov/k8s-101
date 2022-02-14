@@ -6,16 +6,14 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <h1>kubernetes 101</h1>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://kubernetes.io"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn kubernetes
         </a>
       </header>
     </div>

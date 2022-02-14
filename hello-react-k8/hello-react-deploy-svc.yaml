@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: minikube-react-app
+spec:
+  type: NodePort
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+      nodePort: 31000
+  selector:
+    app: minikube-react-app
