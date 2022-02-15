@@ -1,0 +1,28 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: minikube-python-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: minikube-python-app
+  template:
+    metadata:
+      labels:
+        app: minikube-python-app
+    spec:
+      containers:
+      - name: minikube-python-app
+        image: rahymov/flaskapp 
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "100Mi"
+            cpu: "300m"
+          limits:
+            memory: "200Mi"
+            cpu: "600m"
+      restartPolicy: Always    
